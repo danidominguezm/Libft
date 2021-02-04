@@ -1,21 +1,30 @@
 NAME = libft.a
+#HEADER = libft.h 
 CFLAGS = -Wall -Werror -Wextra 
-SRC = $(*.c)
+SRC = main.c \
+      ft_strlen.c \
+      ft_strlcat.c
 OBJ = $(SRC:.c=.o)
-
+CC = gcc
+EXEC = exec
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -o $@ $<
-%.o : %.c
-	$(CC) -c $(CFLAGS) $< -o $@ 
+	ar rc $(NAME) $(OBJ)
 
+%.o : %.c
+	$(CC) -c $(CFLAGS) $< -o $@ #-I $(HEADER) 
+
+exec: all
+	$(CC) -o $(EXEC) $(OBJ) \
+	; ./$(EXEC) \
+	; make fclean	
 clean: 
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME) $(EXEC)
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re exec
 
