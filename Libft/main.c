@@ -1,15 +1,15 @@
 #include "libft.h"
-
+#include <ctype.h>
 int	main()
 {
-
+/*
 	//ft_strlen
 	printf("********ft_strlen********* \n");
 	printf("remake = %zu", ft_strlen("hola"));
 	printf("\noriginal = %zu", strlen("hola"));
 	printf("\n");
-
-	//ft_strlcat
+*/
+/*	//ft_strlcat
 	char dest[10]="holaaaa";
 	char src[]="quetal";
 	unsigned int size = 4;
@@ -21,4 +21,20 @@ int	main()
 	printf("remake = %zu", ft_strlcat(dest, src, size));
 	printf("\noriginal = %u", strncat(dest2, src2, size2));
 	printf("\n");
+*/
+
+	//ft_toupper
+
+	printf("********ft_toupper********* \n");
+	printf("remake = %d", ft_toupper('b'));
+	printf("\noriginal = %d", toupper('b'));
+	printf("\n");
+	
+	//ft_tolower
+
+	printf("********ft_tolower********* \n");
+	printf("remake = %d", ft_tolower('c'));
+	printf("\noriginal = %d", tolower('c'));
+	printf("\n");
+
 }

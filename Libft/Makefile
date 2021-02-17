@@ -3,7 +3,9 @@ NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra 
 SRC = main.c \
       ft_strlen.c \
-      ft_strlcat.c
+      ft_strlcat.c \
+	  ft_toupper.c \
+	  ft_tolower.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec
