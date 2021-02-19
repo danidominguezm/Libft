@@ -5,7 +5,8 @@ SRC = main.c \
       ft_strlen.c \
       ft_strlcat.c \
 	  ft_toupper.c \
-	  ft_tolower.c
+	  ft_tolower.c \
+	  ft_strlcpy.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec
