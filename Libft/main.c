@@ -22,6 +22,23 @@ int	main()
 	printf("\noriginal = %u", strncat(dest2, src2, size2));
 	printf("\n");
 */
+	
+	//ft_isalpha
+	printf("********ft_isalpha********\n");
+	printf("remake = %d", ft_isalpha('x'));
+	printf("\noriginal = %d", isalpha('x'));
+	printf("\n");
+	
+
+	printf("\n");
+	//ft_isdigit	
+	printf("********ft_isdigit********\n");
+	printf("remake = %d", ft_isdigit(4));
+	printf("\noriginal = %d", isdigit(4));
+	printf("\n");
+	
+	printf("\n");
+
 
 	//ft_toupper
 
