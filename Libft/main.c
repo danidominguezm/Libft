@@ -10,18 +10,21 @@ int	main()
 	printf("\n");
 */
 	//ft_strlcat
-	char dest[10]="holaaaa";
-	char src[]="quetal";
-	unsigned int size = 4;
+	char dest[20];
+	const char src[]="quetal";
+	size_t size = 4;
 
-	char dest2[10]="holaaaa";
-	char src2[]="quetal";
-	unsigned int size2 = 4;
+	char dest2[20];
+	const char src2[]="quetal";
+	size_t size2 = 4;
 	printf("********ft_strlcat********* \n");
 	printf("remake = %zu", ft_strlcat(dest, src, size));
-	printf("\noriginal = %s", strncat(dest2, src2, size2));
+	printf("\noriginal = %lu", strlcat(dest2, src2, size2));
 	printf("\n");
 
+	printf("remake dest = %s", dest);
+	printf("\noriginal dest = %s", dest2);
+	printf("\n");
 /*
 	//ft_isalpha
 	printf("********ft_isalpha********\n");
