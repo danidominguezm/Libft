@@ -8,24 +8,26 @@ int	main()
 	printf("remake = %zu", ft_strlen("hola"));
 	printf("\noriginal = %zu", strlen("hola"));
 	printf("\n");
-*/
+
+
+
 	//ft_strlcat
 	char dest[20];
 	const char src[]="quetal";
 	size_t size = 4;
-
 	char dest2[20];
 	const char src2[]="quetal";
 	size_t size2 = 4;
+
 	printf("********ft_strlcat********* \n");
 	printf("remake = %zu", ft_strlcat(dest, src, size));
 	printf("\noriginal = %lu", strlcat(dest2, src2, size2));
 	printf("\n");
-
 	printf("remake dest = %s", dest);
 	printf("\noriginal dest = %s", dest2);
 	printf("\n");
-/*
+
+
 	//ft_isalpha
 	printf("********ft_isalpha********\n");
 	printf("remake = %d", ft_isalpha('x'));
@@ -41,7 +43,7 @@ int	main()
 	printf("\n");
 	
 	printf("\n");
-*/
+
 
 	//ft_toupper
 
@@ -73,5 +75,26 @@ int	main()
 
 	printf("destinoremake = %s", destino);
 	printf("\ndestino system = %s", destino2);
+	printf("\n");
+	
+	
+	//ft_strchr
+	const char s[]="ho latu";
+	int c = 97;
+	const char s2[]="ho latu";
+	int c2 = 97;
+	printf("********ft_strchr********* \n");
+	printf("remake = %s", ft_strchr(s, c));
+	printf("\noriginal = %s", strchr(s2, c2));
+	printf("\n");
+*/
+	//ft_strrchr
+	const char sr[]="iffadaaho al ltu";
+	int cr = 97;
+	const char sr2[]="iffadaaho al ltu";
+	int cr2 = 97; 
+	printf("********ft_strrchr********* \n");
+	printf("remake = %s", ft_strrchr(sr, cr));
+	printf("\noriginal = %s", strrchr(sr2, cr2));
 	printf("\n");
 }
