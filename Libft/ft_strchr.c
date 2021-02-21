@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 18:14:16 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/21 18:45:06 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/02/21 21:34:33 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *) s);
 		s++;
 	}
-	return (0);
+	if(c == 0)
+		return ((char *) s);
+	return(0);	
 }
 	
