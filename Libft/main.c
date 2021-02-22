@@ -87,7 +87,7 @@ int	main()
 	printf("remake = %s", ft_strchr(s, c));
 	printf("\noriginal = %s", strchr(s2, c2));
 	printf("\n");
-*/
+
 	//ft_strrchr
 	const char sr[]="iffadaaho al ltu";
 	int cr = 97;
@@ -96,5 +96,18 @@ int	main()
 	printf("********ft_strrchr********* \n");
 	printf("remake = %s", ft_strrchr(sr, cr));
 	printf("\noriginal = %s", strrchr(sr2, cr2));
+	printf("\n");
+*/
+
+	//ft_strnstr
+//	const char hay[]="holaquetal";
+//	const char need[] = "zeta";
+//	size_t len = 4;
+	const char hay2[]="holaquetal";
+	const char need2[] = "hola";
+	size_t len2 = 4;
+	printf("********ft_strnstr********* \n");
+	//printf("remake = %s", ft_strnstr(hay, need, len));
+	printf("\noriginal = %s", strnstr(hay2, need2, len2));
 	printf("\n");
 }

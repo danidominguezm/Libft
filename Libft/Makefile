@@ -8,7 +8,7 @@ SRC = main.c \
 	  ft_tolower.c \
 	  ft_strlcpy.c \
 	  ft_strchr.c \
-	  ft_strrchr.c
+	  ft_strrchr.c 
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec
