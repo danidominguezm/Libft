@@ -6,16 +6,15 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 17:18:36 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/22 19:30:44 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/02/26 16:57:08 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
 	size_t j;
-	//printf("needle :%s", needle );	
 	
 	if (!*(needle))
 		return ((char *) haystack);

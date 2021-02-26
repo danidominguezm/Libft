@@ -14,10 +14,10 @@ int	main()
 	//ft_strlcat
 	char dest[20];
 	const char src[]="quetal";
-	size_t size = 4;
+	size_t size = 0;
 	char dest2[20];
 	const char src2[]="quetal";
-	size_t size2 = 4;
+	size_t size2 = 0;
 
 	printf("********ft_strlcat********* \n");
 	printf("remake = %zu", ft_strlcat(dest, src, size));
@@ -26,7 +26,7 @@ int	main()
 	printf("remake dest = %s", dest);
 	printf("\noriginal dest = %s", dest2);
 	printf("\n");
-
+	
 
 	//ft_isalpha
 	printf("********ft_isalpha********\n");
@@ -77,7 +77,7 @@ int	main()
 	printf("\ndestino system = %s", destino2);
 	printf("\n");
 	
-	
+
 	//ft_strchr
 	const char s[]="ho latu";
 	int c = 97;
@@ -87,27 +87,79 @@ int	main()
 	printf("remake = %s", ft_strchr(s, c));
 	printf("\noriginal = %s", strchr(s2, c2));
 	printf("\n");
-
+*/
 	//ft_strrchr
-	const char sr[]="iffadaaho al ltu";
-	int cr = 97;
-	const char sr2[]="iffadaaho al ltu";
-	int cr2 = 97; 
+	const char sr[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	int cr = '\0';
+	const char sr2[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	int cr2 = '\0'; 
 	printf("********ft_strrchr********* \n");
 	printf("remake = %s", ft_strrchr(sr, cr));
 	printf("\noriginal = %s", strrchr(sr2, cr2));
 	printf("\n");
-*/
 
+/*
 	//ft_strnstr
-	const char hay[]="";
-	const char need[] = "";
+	const char hay[]="holaquetal";
+	const char need[] = "hola";
 	size_t len = 4;
-	//const char hay2[]="holaquetal";
-	//const char need2[] = "hola";
-	//size_t len2 = 4;
+	const char hay2[]="holaquetal";
+	const char need2[] = "hola";
+	size_t len2 = 4;
 	printf("********ft_strnstr********* \n");
 	printf("remake = %s", ft_strnstr(hay, need, len));
-	//printf("\noriginal = %s", strnstr(hay2, need2, len2));
+	printf("\noriginal = %s", strnstr(hay2, need2, len2));
 	printf("\n");
+
+
+	//ft_strncmp
+	const char comp[]="\200";
+	const char comp1[] = "\0";
+	size_t n1 = 1;
+	const char comp2[]="\200";
+	const char comp3[] = "\0";
+	size_t n2 = 1;
+	printf("********ft_strncmp********* \n");
+	printf("remake = %d", ft_strncmp(comp, comp1, n1));
+	printf("\noriginal = %d", strncmp(comp2, comp3, n2));
+	printf("\n");
+
+
+	//ft_isalnum
+	int	remake = 9;
+	int original = 9;
+	printf("********ft_isalnum********* \n");
+	printf("remake = %d", ft_isalnum(remake));
+	printf("\noriginal = %d", isalnum(original));
+	printf("\n");
+
+	//ft_isalnum
+	int	remascii = 0;
+	int originascii = 0;
+	printf("********ft_isascii********* \n");
+	printf("remake = %d", ft_isascii(remascii));
+	printf("\noriginal = %d", isascii(originascii));
+	printf("\n");
+
+	//ft_isprint
+	int	remasprint = 127;
+	int originasprint = 127;
+	printf("********ft_isprint********* \n");
+	printf("remake = %d", ft_isprint(remasprint));
+	printf("\noriginal = %d", isprint(originasprint));
+	printf("\n");
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
