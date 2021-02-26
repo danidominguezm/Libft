@@ -100,14 +100,14 @@ int	main()
 */
 
 	//ft_strnstr
-//	const char hay[]="holaquetal";
-//	const char need[] = "zeta";
-//	size_t len = 4;
-	const char hay2[]="holaquetal";
-	const char need2[] = "hola";
-	size_t len2 = 4;
+	const char hay[]="";
+	const char need[] = "";
+	size_t len = 4;
+	//const char hay2[]="holaquetal";
+	//const char need2[] = "hola";
+	//size_t len2 = 4;
 	printf("********ft_strnstr********* \n");
-	//printf("remake = %s", ft_strnstr(hay, need, len));
-	printf("\noriginal = %s", strnstr(hay2, need2, len2));
+	printf("remake = %s", ft_strnstr(hay, need, len));
+	//printf("\noriginal = %s", strnstr(hay2, need2, len2));
 	printf("\n");
 }
