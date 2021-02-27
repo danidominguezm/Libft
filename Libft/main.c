@@ -87,18 +87,18 @@ int	main()
 	printf("remake = %s", ft_strchr(s, c));
 	printf("\noriginal = %s", strchr(s2, c2));
 	printf("\n");
-*/
+
 	//ft_strrchr
-	const char sr[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	int cr = '\0';
-	const char sr2[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	int cr2 = '\0'; 
+	const char sr[]="bonjour";
+	int cr = 'b';
+	const char sr2[]="bonjour";
+	int cr2 = 'b'; 
 	printf("********ft_strrchr********* \n");
-	printf("remake = %s", ft_strrchr(sr, cr));
-	printf("\noriginal = %s", strrchr(sr2, cr2));
+	printf("remake = %s", ft_strrchr(sr +2, cr));
+	printf("\noriginal = %s", strrchr(sr2 +2, cr2));
 	printf("\n");
 
-/*
+
 	//ft_strnstr
 	const char hay[]="holaquetal";
 	const char need[] = "hola";
@@ -151,6 +151,12 @@ int	main()
 */
 
 
+	//ft_atoi
+	const char strft[]="  		-4";
+	const char strft2[]="   		-4";
+	printf("********ft_atoi********* \n");
+	printf("remake = %d", ft_atoi(strft));
+	printf("\noriginal = %d",atoi(strft2));
 
 
 

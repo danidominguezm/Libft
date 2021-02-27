@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/27 17:24:33 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/27 18:48:05 by ddomingu         ###   ########.fr       */
+/*   Created: 2021/02/27 19:00:40 by ddomingu          #+#    #+#             */
+/*   Updated: 2021/02/27 20:31:50 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	int	str_len;
+	 int i;
+	 int j;
+	 int res;
+
+	res = 0;
+	i = 0;
 	
-	str_len = ft_strlen(s) - 1;
-	
-	if (c == '\0')
-			return ((char *) s + (str_len + 1));
-	
-	while (*s && str_len >= 0)
+	while (!(*(str + i) >= '0' && *(str + i) <= '9') && *(str + i) != '-')
+		i++;
+
+	j = (*(str + i) == '-' ? -1 : 0);
+
+	while (!(*(str + i) >= '0' && *(str + i) <= '9'))
+		i++;
+
+	while (*(str + i) >= '0' && *(str + i) <= '9')
 	{
-			if (*(s + str_len) == (char) c)
-				return((char *) s + str_len);
-	str_len--;
+		res *= 10;
+		res += *(str + i) - '0';
+		i++;
 	}
-	return (0);
+
+	return (res * j);
 }
