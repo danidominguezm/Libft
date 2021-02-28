@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 19:00:40 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/27 20:31:50 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/02/28 20:44:02 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 int	ft_atoi(const char *str)
 {
-	 int i;
-	 int j;
-	 int res;
+	int i;
+	int sign;
+	int res;
 
 	res = 0;
 	i = 0;
+	sign = 1;
+	while (*(str + i) == '\t' || *(str + i) == '\n'
+			|| *(str + i) == '\v' || *(str + i) ==  '\f' 
+			|| *(str + i) == '\r' || *(str + i) == ' ')
+		i++;
 	
-	while (!(*(str + i) >= '0' && *(str + i) <= '9') && *(str + i) != '-')
-		i++;
-
-	j = (*(str + i) == '-' ? -1 : 0);
-
-	while (!(*(str + i) >= '0' && *(str + i) <= '9'))
-		i++;
-
-	while (*(str + i) >= '0' && *(str + i) <= '9')
+	if (*(str +i) == '-' || *(str + i) == '+')
 	{
-		res *= 10;
-		res += *(str + i) - '0';
+		sign = (*(str + i) == '-' ? -1 : 1);
 		i++;
-	}
+	}	
+	while (*(str + i) >= '0' && *(str + i) <= '9' && *(str + i))
+		res = res * 10 + (*(str + i++) - '0');
 
-	return (res * j);
+	return (res * sign);
 }

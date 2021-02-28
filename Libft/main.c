@@ -152,20 +152,9 @@ int	main()
 
 
 	//ft_atoi
-	const char strft[]="  		-4";
-	const char strft2[]="   		-4";
+	const char strft[]=" 	3";
+	const char strft2[]=" 	3";
 	printf("********ft_atoi********* \n");
 	printf("remake = %d", ft_atoi(strft));
 	printf("\noriginal = %d",atoi(strft2));
-
-
-
-
-
-
-
-
-
-
-
 }
