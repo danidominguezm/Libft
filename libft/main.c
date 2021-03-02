@@ -148,13 +148,30 @@ int	main()
 	printf("remake = %d", ft_isprint(remasprint));
 	printf("\noriginal = %d", isprint(originasprint));
 	printf("\n");
-*/
-
-
+	
 	//ft_atoi
 	const char strft[]=" 	3";
 	const char strft2[]=" 	3";
 	printf("********ft_atoi********* \n");
 	printf("remake = %d", ft_atoi(strft));
 	printf("\noriginal = %d",atoi(strft2));
+*/
+
+
+
+	//ft_memset
+/*	void *s[20];
+	int c = 97;
+	size_t nbytes = 5;
+	printf("********ft_memset********* \n");
+	printf("remake = %p", ft_memset(s, c, nbytes));
+*/	void *sog[20];
+	int cog = 97;
+	size_t nbytesog = 5;
+	printf("********ft_memset********* \n");
+	printf("original = %p", memset(sog, cog, nbytesog));
+
+
+
+
 }
