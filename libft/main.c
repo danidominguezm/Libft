@@ -2,13 +2,13 @@
 #include <ctype.h>
 int	main()
 {
-/*
+
 	//ft_strlen
 	printf("********ft_strlen********* \n");
 	printf("remake = %zu", ft_strlen("hola"));
 	printf("\noriginal = %zu", strlen("hola"));
 	printf("\n");
-
+/*
 
 
 	//ft_strlcat
@@ -165,7 +165,7 @@ int	main()
 	size_t nbytes = 5;
 	printf("********ft_memset********* \n");
 	printf("remake = %p", ft_memset(s, c, nbytes));
-*/	void *sog[20];
+	void *sog[20];
 	int cog = 97;
 	size_t nbytesog = 5;
 	printf("********ft_memset********* \n");
@@ -173,5 +173,5 @@ int	main()
 
 
 
-
+*/
 }
