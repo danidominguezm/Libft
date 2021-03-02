@@ -8,7 +8,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 
 	dst_tmp = (unsigned char *) dst;
 	src_tmp = (unsigned char *) src;
-	
+	//igual se puede quitar el if, prueba a ver	
 	if (dst || src)
 	{
 		while (len--)
