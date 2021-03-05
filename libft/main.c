@@ -2,13 +2,13 @@
 #include <ctype.h>
 int	main()
 {
-
+/*
 	//ft_strlen
 	printf("********ft_strlen********* \n");
 	printf("remake = %zu", ft_strlen("hola"));
 	printf("\noriginal = %zu", strlen("hola"));
 	printf("\n");
-/*
+
 
 
 	//ft_strlcat
@@ -155,12 +155,12 @@ int	main()
 	printf("********ft_atoi********* \n");
 	printf("remake = %d", ft_atoi(strft));
 	printf("\noriginal = %d",atoi(strft2));
-*/
+
 
 
 
 	//ft_memset
-/*	void *s[20];
+	void *s[20];
 	int c = 97;
 	size_t nbytes = 5;
 	printf("********ft_memset********* \n");
@@ -173,5 +173,29 @@ int	main()
 
 
 
+
+
+	//ft_memcmp
+	const void *s1cmp = "holaR";
+	const void *s2cmp = "holaS";
+	size_t nbytes = 4;
+	printf("********ft_memcmp********* \n");
+	printf("remake = %d\n", ft_memcmp(s1cmp, s2cmp, nbytes));
+	const void *soriginal = "holaR";
+	const void *soriginal2 = "holaS";
+	size_t nbytesog = 4;
+	printf("original = %d\n", memcmp(soriginal, soriginal2, nbytesog));
 */
+	//ft_calloc
+	size_t countrmk = 
+	size_t sizermk = 4;
+	printf("********ft_calloc********* \n");
+	printf("remake = %d\n", ft_calloc(countrmk, sizermk));
+	size_t countog = 
+	size_t sizeog = 4;
+	printf("original = %d\n", calloc(countog, sizeog));
+
+	
+
+
 }
