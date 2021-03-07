@@ -23,7 +23,9 @@ SRC = main.c \
 	  ft_bzero.c \
 	  ft_memmove.c \
 	  ft_memchr.c \
-	  ft_memcmp.c
+	  ft_memcmp.c \
+	  ft_calloc.c \
+	  ft_strdup.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec

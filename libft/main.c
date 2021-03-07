@@ -185,7 +185,7 @@ int	main()
 	const void *soriginal2 = "holaS";
 	size_t nbytesog = 4;
 	printf("original = %d\n", memcmp(soriginal, soriginal2, nbytesog));
-*/
+
 	//ft_calloc
 	size_t countrmk = 
 	size_t sizermk = 4;
@@ -194,7 +194,7 @@ int	main()
 	size_t countog = 
 	size_t sizeog = 4;
 	printf("original = %d\n", calloc(countog, sizeog));
-
+*/
 	
 
 
