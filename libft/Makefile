@@ -25,7 +25,9 @@ SRC = main.c \
 	  ft_memchr.c \
 	  ft_memcmp.c \
 	  ft_calloc.c \
-	  ft_strdup.c
+	  ft_strdup.c \
+	  ft_substr.c \
+	  ft_strjoin.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec

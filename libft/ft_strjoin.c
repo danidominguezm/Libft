@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/02 18:11:14 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/08 17:01:10 by ddomingu         ###   ########.fr       */
+/*   Created: 2021/03/08 18:30:17 by ddomingu          #+#    #+#             */
+/*   Updated: 2021/03/08 21:09:38 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char *dst_tmp;
-	unsigned char *src_tmp;
-	size_t i;
+	char *joined;
+	size_t	len1;
+	size_t	len2;
 
-	i = -1;
-	dst_tmp = (unsigned char *) dst;
-	src_tmp = (unsigned char *) src;
+	if (!s1 || !s2)
+		return (NULL);
+	
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	
+	joined = (char *) ft_calloc((len1 + len2 + 1), sizeof(char));
+	
+	if (!joined)
+		return(NULL);
 
-	while (++i < n)
-	{
-		*(dst_tmp + i) = *(src_tmp + i);
-		if ((unsigned char) c == *(src_tmp + i))
-			return (dst + i + 1);
-	}
-	return (NULL);
+	ft_memcpy(joined, s1, len1);
+	ft_memcpy((joined + len1), s2, len2 + 1);	
+
+	return (joined);
 }

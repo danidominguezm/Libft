@@ -194,8 +194,20 @@ int	main()
 	size_t countog = 
 	size_t sizeog = 4;
 	printf("original = %d\n", calloc(countog, sizeog));
-*/
-	
 
+	//ft_calloc
+	
+	char const *srem;
+	unsigned int startrm;
+	size_t lenrm = 4;
+	printf("********ft_substr********* \n");
+	printf("remake = %d\n", ft_calloc(countrmk, sizermk));
+	printf("original = %d\n", calloc(countog, sizeog));
+	
+*/
+	//ft_strjoin
+	char const *s1rm = "hola ";
+	char const *s2rm = "comoestas";
+	printf("%s", ft_strjoin(s1rm, s2rm));
 
 }
