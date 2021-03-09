@@ -1,36 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/08 18:30:17 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/08 21:10:58 by ddomingu         ###   ########.fr       */
+/*   Created: 2021/03/09 18:00:33 by ddomingu          #+#    #+#             */
+/*   Updated: 2021/03/09 20:21:47 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	char *joined;
-	size_t	len1;
-	size_t	len2;
+		int	i;
+		int j;
+		int lenset;
+		int start;
 
-	if (!s1 || !s2)
-		return (NULL);
-	
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	
-	joined = (char *) ft_calloc((len1 + len2 + 1), sizeof(char));
-	
-	if (!joined)
-		return(NULL);
 
-	ft_memcpy(joined, s1, len1);
-	ft_memcpy((joined + len1), s2, len2 + 1);	
+		lenset = ft_strlen(set);
+		start = 0;
+		if (!s1)
+			return (NULL);
+				
+		i = 0;
+		while(*(s1 + i))
+		{
+			j = 0;
+			i = 0;
+			while (j < lenset)
+			{
+				if (*(s1 + i) == *(set + j))
+				{
+					i++;
+					start++;
+					j = -1;
+				}
+				j++;
+			}
+			i++;
+		}
+		return (ft_substr(s1, start, 2));
 
-	return (joined);
+
+
 }

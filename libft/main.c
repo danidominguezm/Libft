@@ -204,10 +204,17 @@ int	main()
 	printf("remake = %d\n", ft_calloc(countrmk, sizermk));
 	printf("original = %d\n", calloc(countog, sizeog));
 	
-*/
+
 	//ft_strjoin
 	char const *s1rm = "hola ";
 	char const *s2rm = "comoestas";
 	printf("%s", ft_strjoin(s1rm, s2rm));
+*/
+	//ft_strtrim
+	char const *s1rm = "iola ";
+	char const *setrm = "i";
+	printf("********ft_strtrim********* \n");
+	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
+
 
 }
