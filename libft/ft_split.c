@@ -1,32 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/09 18:00:33 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/10 21:32:13 by ddomingu         ###   ########.fr       */
+/*   Created: 2021/03/10 20:24:19 by ddomingu          #+#    #+#             */
+/*   Updated: 2021/03/10 21:49:41 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char **ft_split(char const *s, char c)
 {
-		int end;
-		int start;
+	size_t wrds;
+	int i;
 
-		start = 0;
-		if (!s1 || !set)
-			return (NULL);
-		
-		while (*(s1) && ft_strchr(set, *(s1 + start)))
-			start++;
-		
-		end = ft_strlen(s1 + start);
-		while(*(s1) && ft_strchr(set, *(s1 + end + start - 1)))
-			end--;
-		
-		return (ft_substr(s1, start, end));
+	if (!s)
+		return (NULL);
+	
+	wrds = 1;
+	i = 0;
+	while (*(s + i))
+	{
+		if (*(s + i) == c)
+		{	
+			wrds++;
+			while (*(s + i) == c)
+				i++;
+		}	
+		else
+			i++;
+	}
+	
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
 }
