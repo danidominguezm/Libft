@@ -209,12 +209,22 @@ int	main()
 	char const *s1rm = "hola ";
 	char const *s2rm = "comoestas";
 	printf("%s", ft_strjoin(s1rm, s2rm));
-*/
+
 	//ft_strtrim
 	char const *s1rm = "\tb\n";
 	char const *setrm = "\n";
 	printf("********ft_strtrim********* \n");
 	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
+
+	
+	//ft_split
+	char const *split ="";
+	char character = "";
+	printf("split:%s\n", ft_split(split, character));
+	
+*/	
+
+
 
 
 }
