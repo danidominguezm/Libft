@@ -216,13 +216,13 @@ int	main()
 	printf("********ft_strtrim********* \n");
 	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
 
-	
-	//ft_split
-	char const *split ="";
-	char character = "";
-	printf("split:%s\n", ft_split(split, character));
-	
 */	
+	//ft_split
+	char const *split ="hola, esto es 1 prueba";
+	char character = '1';
+	printf("split:%s\n", *ft_split(split, character));
+	
+	
 
 
 
