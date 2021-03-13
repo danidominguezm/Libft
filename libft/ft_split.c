@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 20:24:19 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/10 21:49:41 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/13 20:36:53 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,23 @@ char **ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	
-	wrdcnt = 1;
+	wrdcnt = 0;
 	i = 0;
-	while (*(s + i))
+	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == c)
-		{	
-			wrdcnt++;
-			while (*(s + i) == c)
-				i++;
-		}	
-		else
 			i++;
+		else
+		{
+			wrdcnt++;
+			while (*(s + i) != c && *(s + i) != '\0')
+				i++;
+		}
+		//printf("iterador:%i\n", i);
 	}
-	printf("wrdcnt:%zu\n", wrdcnt);	
+	//printf("wrdcnt:%zu\n", wrdcnt);	
+	//printf("i:%i\n", i);
+	
 	char **table;
 
 	table = malloc(sizeof(char *) * wrdcnt + 1);
@@ -44,39 +47,47 @@ char **ft_split(char const *s, char c)
 	
 	word = 0;
 	j = 0;	
-	while (word <= wrdcnt && *(s + j))
+	while (word < wrdcnt)
 	{
 		k = 0;
-		while (*(s + j) != c)
+		while(*(s + j) == c)
+			j++;
+		while (*(s + j) != c && *(s + j))
 		{
 			j++;
 			k++;
 		}
-		while (*(s + j) == c)
-			j++;
-		
+/*		printf("sizeofword:%i\n", k);
+		printf("iterator:%i\n", j);
+		printf("reserved words:%zu\n", word);
 		table[word] = malloc(sizeof(char) * k + 1);	
+*/
+		table[word] = ft_calloc(k, sizeof(char));
 		word++;
+
 
 	}
 	
 	word = 0;
 	j = 0;
-	while (word <= wrdcnt && *(s + j))
+	while (word < wrdcnt)
 	{
 		k = 0;
-		while (*(s + j) != c)
+		while (*(s + j) == c)
+			j++;
+		while (*(s + j) != c && *(s + j))
 		{
 			table[word][k] = *(s + j);
 			k++;
 			j++;
 		}
-		while (*(s + j) == c)
-			j++;
-		table[word][k] = 'A';	
+	//	printf("sizeofactualword:%i\n", k);
+	//	printf("word:%zu\n", word);
+		table[word][k] = '\0';	
 		word++;
-		printf("word:%zu\n", word);
+		//printf("word:%zu\n", word);
 	}
 	table[word] = NULL;
+	
 	return(table);
 }

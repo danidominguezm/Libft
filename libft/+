@@ -217,13 +217,15 @@ int	main()
 	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
 */	
 	//ft_split
-	char const *split ="abcUdefU";
-	char **res = ft_split(split, 'U');
-	for (int k = 0; k < 2; k++ && *(res))
+	char const split[] ="cuando tu quieres uh";
+	char character = 'u';
+	char **res = ft_split(split, character);
+	for (int k = 0; k < 5; k++ && *(res))
 	{
 		printf("res:%s", res[k]);
 		printf("\n");
 	}
+	free(res);	
 
 
 
