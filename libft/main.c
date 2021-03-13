@@ -217,11 +217,11 @@ int	main()
 	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
 */	
 	//ft_split
-	char const *split ="abcUdefU";
-	char **res = ft_split(split, 'U');
-	for (int k = 0; k < 2; k++ && *(res))
+	char *split = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char **res = ft_split(split, ' ');
+	for (int k = 0; k < 12; k++ && *(res))
 	{
-		printf("res:%s", res[k]);
+		printf("%s", res[k]);
 		printf("\n");
 	}
 

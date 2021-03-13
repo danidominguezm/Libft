@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 20:24:19 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/13 20:36:53 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/13 21:22:27 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,13 @@ char **ft_split(char const *s, char c)
 			while (*(s + i) != c && *(s + i) != '\0')
 				i++;
 		}
-		//printf("iterador:%i\n", i);
 	}
-	//printf("wrdcnt:%zu\n", wrdcnt);	
-	//printf("i:%i\n", i);
 	
 	char **table;
 
-	table = malloc(sizeof(char *) * wrdcnt + 1);
+	table =(char **) ft_calloc(wrdcnt + 1, sizeof(char *));
+	if (!table)
+		return(NULL);
 	size_t	word;
 	int 	j;
 	int 	k;
@@ -54,15 +53,14 @@ char **ft_split(char const *s, char c)
 			j++;
 		while (*(s + j) != c && *(s + j))
 		{
-			j++;
 			k++;
+			j++;
 		}
-/*		printf("sizeofword:%i\n", k);
-		printf("iterator:%i\n", j);
-		printf("reserved words:%zu\n", word);
-		table[word] = malloc(sizeof(char) * k + 1);	
-*/
-		table[word] = ft_calloc(k, sizeof(char));
+		table[word] = malloc(sizeof(char) * k + 1);
+		
+		if(!table)
+			return (NULL);
+		table[word][k] = '\0';
 		word++;
 
 
@@ -81,11 +79,8 @@ char **ft_split(char const *s, char c)
 			k++;
 			j++;
 		}
-	//	printf("sizeofactualword:%i\n", k);
-	//	printf("word:%zu\n", word);
-		table[word][k] = '\0';	
+	//	table[word][k] = '\0';	
 		word++;
-		//printf("word:%zu\n", word);
 	}
 	table[word] = NULL;
 	
