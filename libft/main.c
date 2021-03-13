@@ -218,10 +218,14 @@ int	main()
 
 */	
 	//ft_split
-	char const *split ="hola, esto es 1 prueba";
+	char const *split ="1hola,1 esto es 1 prueba1";
 	char character = '1';
-	printf("split:%s\n", *ft_split(split, character));
-	
+	char **res = ft_split(split, character);
+	for (int k = 0; k < 3; k++ && *(res))
+	{
+		printf("res:%s", res[k]);
+		printf("\n");
+	}
 	
 
 

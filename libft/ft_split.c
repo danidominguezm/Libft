@@ -33,7 +33,7 @@ char **ft_split(char const *s, char c)
 		else
 			i++;
 	}
-	
+	printf("wrdcnt:%zu\n", wrdcnt);	
 	char **table;
 
 	table = malloc(sizeof(char *) * wrdcnt + 1);
@@ -44,7 +44,7 @@ char **ft_split(char const *s, char c)
 	
 	word = 0;
 	j = 0;	
-	while (word <= wrdcnt && *(s))
+	while (word <= wrdcnt && *(s + j))
 	{
 		k = 0;
 		while (*(s + j) != c)
@@ -62,7 +62,7 @@ char **ft_split(char const *s, char c)
 	
 	word = 0;
 	j = 0;
-	while (word <= wrdcnt && *(s))
+	while (word <= wrdcnt && *(s + j))
 	{
 		k = 0;
 		while (*(s + j) != c)
@@ -73,9 +73,9 @@ char **ft_split(char const *s, char c)
 		}
 		while (*(s + j) == c)
 			j++;
-		
-		table[word][k] = '\0';	
+		table[word][k] = 'A';	
 		word++;
+		printf("word:%zu\n", word);
 	}
 	table[word] = NULL;
 	return(table);
