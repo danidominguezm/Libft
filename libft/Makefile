@@ -32,7 +32,9 @@ SRC = main.c \
 	  ft_split.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
-	  ft_putendl_fd.c
+	  ft_putendl_fd.c \
+	  ft_putnbr_fd.c \
+	  ft_itoa.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 EXEC = exec

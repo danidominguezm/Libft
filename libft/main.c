@@ -215,7 +215,7 @@ int	main()
 	char const *setrm = "\n";
 	printf("********ft_strtrim********* \n");
 	printf("trim =%s\n", ft_strtrim(s1rm, setrm));
-*/	
+
 	//ft_split
 	char *split = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
 	char **res = ft_split(split, ' ');
@@ -225,7 +225,9 @@ int	main()
 		printf("\n");
 	}
 
-
-
+*/
+	int fd = 1;
+	int n = 34;
+	ft_putnbr_fd(n, fd);
 
 }

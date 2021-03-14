@@ -6,19 +6,17 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 20:24:19 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/13 21:22:27 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/14 18:36:36 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+static size_t	ft_wordcount(char const *s, char c)
 {
+
 	size_t wrdcnt;
 	int i;
-
-	if (!s)
-		return (NULL);
 	
 	wrdcnt = 0;
 	i = 0;
@@ -33,12 +31,13 @@ char **ft_split(char const *s, char c)
 				i++;
 		}
 	}
-	
-	char **table;
 
-	table =(char **) ft_calloc(wrdcnt + 1, sizeof(char *));
-	if (!table)
-		return(NULL);
+	return (wrdcnt);
+}
+
+static char **ft_reserve_table(char **table, char const *s, char c, size_t wrdcnt)
+{
+	
 	size_t	word;
 	int 	j;
 	int 	k;
@@ -56,16 +55,21 @@ char **ft_split(char const *s, char c)
 			k++;
 			j++;
 		}
-		table[word] = malloc(sizeof(char) * k + 1);
-		
+	
+		table[word] = (char *) ft_calloc(k + 1, sizeof(char *));
 		if(!table)
 			return (NULL);
-		table[word][k] = '\0';
 		word++;
-
-
 	}
-	
+	return (table);
+}
+
+static char **ft_fill_table(char **table, char const *s, char c, size_t wrdcnt)
+{
+	int j;
+	int k;
+	size_t word;
+
 	word = 0;
 	j = 0;
 	while (word < wrdcnt)
@@ -79,10 +83,28 @@ char **ft_split(char const *s, char c)
 			k++;
 			j++;
 		}
-	//	table[word][k] = '\0';	
 		word++;
 	}
-	table[word] = NULL;
 	
+	return (table);
+}
+
+char **ft_split(char const *s, char c)
+{
+	char **table;
+	size_t wrdcnt;
+
+	if (!s)
+		return (NULL);
+
+	table =(char **) ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
+	
+	if (!table)
+		return(NULL);
+	wrdcnt = ft_wordcount(s, c);
+
+	table = ft_reserve_table(table, s, c, wrdcnt);
+	table = ft_fill_table(table, s, c, wrdcnt);
+
 	return(table);
 }
