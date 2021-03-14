@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 19:22:04 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/14 20:27:17 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:31:37 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,22 @@ char *ft_itoa(int n)
 
 
 }
+static int	ft_nbr_counter(int n)
+{
+	int i;
 
+	i = 0;
+	if (n == 0)
+		return (1);
+	else if (n < 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n > 0 && ++i)
+		n /= 10;
+	return (i);
+}
 {
 	char *str;
 
