@@ -6,38 +6,14 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 19:22:04 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/14 20:38:42 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/15 18:23:48 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-char *ft_itoa(int n)
-{
-	char *str;
-
-	str = ft_calloc(ft_nbr_counter(n) + 1, sizeof(char));
-	
-	unsigned int nbr;
-
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nbr = -n;
-	}
-	else
-		nbr = n;
-	if (nbr >= 10)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putnbr_fd(nbr % 10, fd);
-	}
-	else
-		ft_putchar_fd(nbr + '0', fd);
-
-
-}
 static int	ft_nbr_counter(int n)
 {
-	int i;
+	int len;
 
 	len = 0;
 	if (n == 0)
@@ -50,5 +26,39 @@ static int	ft_nbr_counter(int n)
 	while (n > 0 && ++len)
 		n /= 10;
 	return (len);
+}
+
+char		*ft_itoa(int n)
+{
+
+	char	*str;
+	int		len;
+
+	len = ft_nbr_counter(n);
+	str =(char *) malloc(len + 1 * (sizeof(char)));
+	if (!str)
+		return (NULL);
+	
+	*(str + len) = '\0';
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+
+	if (n < 0)
+	{
+		*(str) = '-';
+		n *= -1;
+	}
+
+	else if (n == 0)
+		*(str) = '0';
+	
+	while (n && len--)
+	{
+		*(str + len) = (n % 10) + '0';
+		n /= 10;
+	}	
+
+	return (str);
 }
 

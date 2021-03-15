@@ -226,8 +226,6 @@ int	main()
 	}
 
 */
-	int fd = 1;
-	int n = 34;
-	ft_putnbr_fd(n, fd);
+	printf("itoa:%s\n", ft_itoa(39593));
 
 }
