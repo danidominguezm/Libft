@@ -36,7 +36,12 @@ SRC = main.c \
 	  ft_putnbr_fd.c \
 	  ft_itoa.c \
 	  ft_strmapi.c
+
+BON_SRC = ft_lstnew.c \
+		  ft_lstadd_front.c 
+
 OBJ = $(SRC:.c=.o)
+BON_OBJ = $(BON_SRC:.c=.o)
 CC = gcc
 EXEC = exec
 
@@ -44,6 +49,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
+
+bonus: $(BON_OBJ)
+	ar rc $(NAME) $(BON_OBJ)
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@ #-I $(HEADER) 
@@ -54,9 +62,10 @@ exec: all
 	; make fclean	
 clean: 
 	@rm -f $(OBJ)
+	@rm -f *.o
 fclean: clean
 	@rm -f $(NAME) $(EXEC)
-re: fclean all
+re: fclean all 
 
-.PHONY: all clean fclean re exec
+.PHONY: all clean fclean re exec bonus
 
