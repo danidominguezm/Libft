@@ -6,13 +6,13 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 20:39:17 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/26 20:43:12 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:02:40 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
-	return(c >= 0  && c <= 0177 );
+	return (c >= 0 && c <= 0177);
 }

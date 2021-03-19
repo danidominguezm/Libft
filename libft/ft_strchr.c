@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 18:14:16 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/21 21:34:33 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:44:53 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == (char) c )
-			return ((char *) s);
+		if (*s == (char)c)
+			return ((char *)s);
 		s++;
 	}
-	if(c == 0)
-		return ((char *) s);
-	return(0);	
+	if (c == 0)
+		return ((char *)s);
+	return (0);
 }
-	

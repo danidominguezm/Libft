@@ -6,13 +6,13 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 20:43:26 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/26 20:58:42 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:05:06 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
-	return(c >= 32  && c <= 126);
+	return (c >= 32 && c <= 126);
 }

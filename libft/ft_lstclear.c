@@ -6,16 +6,16 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 18:42:34 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/18 19:29:49 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:15:24 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*runner;
-	t_list 	*aux;
+	t_list	*aux;
 
 	runner = *lst;
 	aux = NULL;

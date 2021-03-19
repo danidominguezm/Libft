@@ -6,21 +6,19 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 19:29:56 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/18 20:00:52 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:17:54 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
 		return ;
-
 	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;
 	}
 }
- 

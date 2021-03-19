@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 16:27:21 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/18 17:09:05 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/19 21:22:46 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*run;
-	int	counter;
+	int		counter;
 
 	run = lst;
 	counter = 0;
