@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 20:24:19 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/19 21:42:54 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/20 16:23:12 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char		**ft_reserve_table(char **tb, char const *s, char c, size_t cnt)
 			j++;
 		}
 		tb[word] = (char *)ft_calloc(k + 1, sizeof(char *));
-		if (!table)
+		if (!tb)
 			return (NULL);
 		word++;
 	}

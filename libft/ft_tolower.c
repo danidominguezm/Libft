@@ -6,14 +6,13 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:32:25 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/02/17 19:07:31 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/20 16:15:20 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	return(((c > 64) && (c < 91)) ? (c + 32) : c );
+	return (((c > 64) && (c < 91)) ? (c + 32) : c);
 }
-

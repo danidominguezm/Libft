@@ -225,7 +225,9 @@ int	main()
 		printf("\n");
 	}
 
-*/
 	printf("itoa:%s\n", ft_itoa(39593));
 
+	printf("remake:%zu\n", ft_strlcat("rrrrrrrrrrrrrrr","lorem ipsum dolor sit amet", 5));
+	printf("original:%zu\n", strlcat("rrrrrrrrrrrrrrr", "lorem ipsum dolor sit amet", 5));
+*/
 }
