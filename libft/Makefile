@@ -67,7 +67,6 @@ exec: all
 	; make fclean	
 clean: 
 	@rm -f $(OBJ)
-	@rm -f *.o
 fclean: clean
 	@rm -f $(NAME) $(EXEC)
 re: fclean all 
