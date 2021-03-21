@@ -6,7 +6,7 @@
 /*   By: ddomingu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:57:32 by ddomingu          #+#    #+#             */
-/*   Updated: 2021/03/20 20:31:06 by ddomingu         ###   ########.fr       */
+/*   Updated: 2021/03/21 18:23:05 by ddomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	i = 0;
-	if (dstsize<= dst_len)
+	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	while (src[i] && (dst_len + i) < dstsize - 1)
 	{

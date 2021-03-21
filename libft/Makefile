@@ -1,8 +1,7 @@
 NAME = libft.a
 #HEADER = libft.h 
 CFLAGS = -Wall -Werror -Wextra 
-SRC = main.c \
-      ft_strlen.c \
+SRC = ft_strlen.c \
       ft_strlcat.c \
 	  ft_toupper.c \
 	  ft_tolower.c \
